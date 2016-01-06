@@ -1,0 +1,78 @@
+---
+layout: default
+---
+<script>
+  /** Get Input Value
+    returns the value of an element by its ID. */
+  function getValue( id ){
+    return document.getElementById(id).value;
+  }
+  /** Calculate Tax A
+    returns the result of plugging the current input values into the current plan. 
+    instead of parameters, these functions use getValue to read their inputs. */
+  function CalculateTaxA() {
+    var finalValue = 0;
+    var income = getValue("income");
+    
+    //Standard reduction, which varies according to status
+    switch(getValue());
+
+    //Each dependent is a 4,050 exemption
+    finalValue -= (getValue("dependents") * 4050);
+    finalValue += income/2;
+
+    return finalValue;
+  }
+  /** Calculate Tax B
+    returns the result of plugging the current input values into Bernie's tax plan. */
+  function CalculateTaxB() {
+    var finalValue;
+
+    finalValue = 0;
+
+    return finalValue;
+  }
+  /** Set Results
+  sets ResultA and ResultB to the results of their respective functions. */
+  function setResults() {
+    document.getElementById('resultA').innerHTML = ' $'+CalculateTaxA();
+    document.getElementById('resultB').innerHTML = ' $'+CalculateTaxB();
+  }
+</script>
+<div id="app">
+  <form>
+    <p>
+      <label for="income">Income: </label><input id="income" />
+    </p>
+    <p>
+    <label for="exemptions">Dependents: </label><input id="dependents" type="number"
+        min="0"
+        max="10"
+        step="1"
+        value="0">
+    </p>
+  </form>
+  <p class="result">Your tax is now<span id="resultA">...</span></p>
+  <p class="result">Your tax would be<span id="resultB">...</span></p>
+  <button onclick="setResults()">Calculate</button>
+</div>
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

@@ -1,0 +1,35 @@
+/**
+* App Styles
+*/
+#app {
+  border-color: lightgrey;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 1em 1em 2em 1em;
+  text-align: center;
+  margin-bottom: 2em;
+
+  form p{
+    margin: 0.25em;
+    margin-bottom: 0.8em;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    background-color: #DEDEDE;
+    height: 1.5em;
+    text-align: left;
+
+    *{
+      display: inline-block;
+    }
+    input{
+      float: right;
+      width: 50%;
+    }
+  }
+  .result{
+    font-size: 1.3em;
+    margin: 0.4em;
+  }
+  button{
+    text-align: center;
+  }
+}
