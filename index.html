@@ -35,6 +35,12 @@ layout: default
     document.getElementById('resultB').innerHTML = ' $'+CalculateTaxB();
   }
 </script>
+
+<style>
+{% capture sass_stylesheet %}{% include_relative _sass/app.scss %}{% endcapture %}
+{{ sass_stylesheet | scssify }}
+</style>
+
 <div id="app">
   <form>
     <p>
