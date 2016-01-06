@@ -12,14 +12,10 @@ layout: default
     instead of parameters, these functions use getValue to read their inputs. */
   function CalculateTaxA() {
     var finalValue = 0;
-    var income = getValue("income");
+    finalValue += getValue("income");
     
-    //Standard reduction, which varies according to status
-    switch(getValue());
-
     //Each dependent is a 4,050 exemption
     finalValue -= (getValue("dependents") * 4050);
-    finalValue += income/2;
 
     return finalValue;
   }
