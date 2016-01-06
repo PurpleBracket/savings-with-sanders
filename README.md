@@ -1,5 +1,5 @@
 # Savings with Sanders
-A minimal static website using Jekyll generated static HTML and Javascript to calculate taxes under Bernie Sanders' tax plan.
+A minimal static website using [Jekyll](http://www.jekyllrb.com) generated static HTML and Javascript to calculate taxes under Bernie Sanders' tax plan.
 
 I chose Jekyll because I want this website to be easy for anyone and everyone to run on their devices while also allowing the flexibility of news posts. Ideally, I want the page to work independent of a server so one can save the HTML page and use the calculator offline.
 
