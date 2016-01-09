@@ -1,0 +1,49 @@
+<script>
+  /** Get Input Value
+    returns the value of an element by its ID. */
+  function getValue( id ){
+    return document.getElementById(id).value;
+  }
+  /** Calculate Tax A
+    returns the result of plugging the current input values into the current plan. 
+    instead of parameters, these functions use getValue to read their inputs. */
+  function CalculateTaxA() {
+    var finalValue = 0;
+
+    return finalValue;
+  }
+  /** Calculate Tax B
+    returns the result of plugging the current input values into Bernie's tax plan. */
+  function CalculateTaxB() {
+    var finalValue = 0;
+
+    return finalValue;
+  }
+  /** Set Results
+  sets ResultA and ResultB to the results of their respective functions. */
+  function setResults() {
+    document.getElementById('resultA').innerHTML = ' $'+CalculateTaxA();
+    document.getElementById('resultB').innerHTML = ' $'+CalculateTaxB();
+  }
+</script>
+
+<style>
+{% capture sass_stylesheet %}{% include_relative _sass/app.scss %}{% endcapture %}
+{{ sass_stylesheet | scssify }}
+</style>
+
+<div id="app">
+  <form>
+    {% for category in site.input-categories %}
+    <div>
+      <h3>{{category.title}}</h3>
+      {% for input in category.inputs %}
+      <div><label for="{{input | slugify}}">{{input}}</label><input id="{{input | slugify}}" /></div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </form>
+  <p class="result">Your tax is now<span id="resultA">...</span></p>
+  <p class="result">Your tax would be<span id="resultB">...</span></p>
+  <button onclick="setResults()">Calculate</button>
+</div>

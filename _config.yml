@@ -16,3 +16,28 @@ url: "http://savewithsanders.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+# Collections / Settings
+input-categories:
+  - title: Personal Income
+    inputs:
+    - Income
+  - title: Speculative Income
+    inputs:
+    - Income from Capital Gains
+    - Income from Stocks
+    - Income from Derivatives
+    - Income from Bonds
+  - title: Estate Income
+    inputs:
+    - Inheritance Size
+    - Net Wealth
+  - title: Student Loans
+    inputs:
+    - Amount in Student Loans
+    - Student Loan Rate
+    - Months left until repaid
+  - title: Family Expenses
+    inputs:
+    - Number of Dependents
+    - Monthly Health Insurance Payments
