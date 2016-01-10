@@ -1,0 +1,9 @@
+{% capture minimal-page %}
+<!DOCTYPE html>
+<html>
+  <body>
+    {{ content }}
+  </body>
+</html>
+{% endcapture %}
+{{ minimal-page | remove: "  " | remove: "	" | strip_newlines }}
