@@ -11,4 +11,13 @@ I'm fully aware that some people may pay more taxes under Bernie's tax plan, but
 
 #How to run
 1. Install Jekyll
-2. While in the project's root directory, run jekyll serve
+
+```bash
+~#: gem install jekyll
+```
+
+2. While in the project's root directory, run:
+
+```bash
+~$: jekyll serve
+```

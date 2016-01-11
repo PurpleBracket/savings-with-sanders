@@ -19,9 +19,8 @@ markdown: kramdown
 
 # Minification
 compress_html:
-  comments: ["/*", "*/"]
+  comments: ["/*", "*/", "<--", "-->"]
   blanklines: false
-  profile: false
 
 # Input Categories
 # These are practically ripped straight from berniecalc.com

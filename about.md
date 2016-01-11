@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-
+You can find a better version of this project at http://www.berniecalc.com
 
 You can find the source code for the Jekyll new theme at:
 {% include icon-github.html username="jglovier" %} /

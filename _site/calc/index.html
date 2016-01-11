@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+  /** Get Input Value
+    returns the value of an element by its ID. */
+  function getValue( id ){
+    return document.getElementById(id).value;
+  }
+  /** Calculate Tax A
+    returns the result of plugging the current input values into the current plan. 
+    instead of parameters, these functions use getValue to read their inputs. */
+  function CalculateTaxA() {
+    var finalValue = 0;
+
+    return finalValue;
+  }
+  /** Calculate Tax B
+    returns the result of plugging the current input values into Bernie's tax plan. */
+  function CalculateTaxB() {
+    var finalValue = 0;
+
+    return finalValue;
+  }
+  /** Set Results
+  sets ResultA and ResultB to the results of their respective functions. */
+  function setResults() {
+    document.getElementById('resultA').innerHTML = ' $'+CalculateTaxA();
+    document.getElementById('resultB').innerHTML = ' $'+CalculateTaxB();
+  }
+</script>
+
+<style>
+
+/**
+* App Styles
+*/
+#app {
+  font: 1em/1.4 Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+  line-height: 1.4;
+  max-width: 650px;
+  margin: auto;
+  padding-left: 1%; }
+  #app form > div {
+    padding: 0.5em 0; }
+  #app legend {
+    font-size: 1.1em;
+    font-weight: 500; }
+  #app label, #app input {
+    width: 48%;
+    display: inline-block; }
+
+</style>
+
+<div id="app">
+  <form>
+    
+    <div>
+      <legend>Personal Income</legend>
+      
+      <div><label for="income">Income</label><input id="income" /></div>
+      
+    </div>
+    
+    <div>
+      <legend>Speculative Income</legend>
+      
+      <div><label for="income-from-capital-gains">Income from Capital Gains</label><input id="income-from-capital-gains" /></div>
+      
+      <div><label for="income-from-stocks">Income from Stocks</label><input id="income-from-stocks" /></div>
+      
+      <div><label for="income-from-derivatives">Income from Derivatives</label><input id="income-from-derivatives" /></div>
+      
+      <div><label for="income-from-bonds">Income from Bonds</label><input id="income-from-bonds" /></div>
+      
+    </div>
+    
+    <div>
+      <legend>Estate Income</legend>
+      
+      <div><label for="inheritance-size">Inheritance Size</label><input id="inheritance-size" /></div>
+      
+      <div><label for="net-wealth">Net Wealth</label><input id="net-wealth" /></div>
+      
+    </div>
+    
+    <div>
+      <legend>Student Loans</legend>
+      
+      <div><label for="amount-in-student-loans">Amount in Student Loans</label><input id="amount-in-student-loans" /></div>
+      
+      <div><label for="student-loan-rate">Student Loan Rate</label><input id="student-loan-rate" /></div>
+      
+      <div><label for="months-left-until-repaid">Months left until repaid</label><input id="months-left-until-repaid" /></div>
+      
+    </div>
+    
+    <div>
+      <legend>Family Expenses</legend>
+      
+      <div><label for="number-of-dependents">Number of Dependents</label><input id="number-of-dependents" /></div>
+      
+      <div><label for="monthly-health-insurance-payments">Monthly Health Insurance Payments</label><input id="monthly-health-insurance-payments" /></div>
+      
+    </div>
+    
+  </form>
+  <p class="result">Your tax is now<span id="resultA">...</span></p>
+  <p class="result">Your tax would be<span id="resultB">...</span></p>
+  <button onclick="setResults()">Calculate</button>
+</div>
+
+
+  </body>
+</html>
+
