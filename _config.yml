@@ -17,7 +17,14 @@ url: "http://savewithsanders.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
-# Collections / Settings
+# Minification
+compress_html:
+  comments: ["/*", "*/"]
+  blanklines: false
+  profile: false
+
+# Input Categories
+# These are practically ripped straight from berniecalc.com
 input-categories:
   - title: Personal Income
     inputs:
